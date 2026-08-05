@@ -1,34 +1,58 @@
 import './homeNav.css';
 import { Link } from 'react-router-dom';
 
-// const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}', 
-//     { eager: true});
+const icons = import.meta.glob(
+    '../assets/icons/*.{png,jpg,jpeg,svg}',
+    {
+        eager: true,
+        import: 'default'
+    }
+);
 
-const icons = import.meta.glob('../assets/icons/*.{png,jpg,jpeg,svg}', 
-    { eager: true,
-      import: 'default'
-    });
+export default function HomeNav() {
+    return (
+        <nav className="homeNav">
 
-export default function HomeNav (){
-    return(
-        <>
-           <nav>
-               <div className="navLinks">
-                    <Link to="/shop">Shop</Link>
-                    <Link to="/contact">Contact Us</Link>
-               </div>
+            {/* Left navigation */}
+            <div className="navLinks">
+                <Link to="/shop">Shop</Link>
+                <a href=''>Bestsellers</a>
+                <a href=''>About</a>
+            </div>
 
-               <div className="logo">
-                  <img src={icons['../assets/icons/lumi logo.png']} alt="" />
-               </div>
+            {/* Center logo */}
+            <Link to="/" className="logo">
+                <img
+                    src={icons['../assets/icons/lumi logo.png']}
+                    alt="LUMI"
+                />
+            </Link>
 
-               <div className="homeNav-cta">
-                  <button className='accountBtn'><img src={icons['../assets/icons/icon placeholder.png']} alt="" /></button>
-                  <button className='whatsappBtn'>Chat with Us</button>
+            {/* Right navigation */}
+            <div className="homeNav-cta">
 
-               </div>
-           </nav>
+                <div className="contact">
+                    <Link to="/shop">Contact Us</Link>
+                </div>
 
-        </>
+                <button className="iconBtn">
+                    <img
+                        id='accountCta'
+                        src={icons['../assets/icons/icon placeholder.png']}
+                        alt="Wishlist"
+                    />
+                </button>
+
+                <button className="iconBtn">
+                    <img
+                        id='whatsappCta'
+                        src={icons['../assets/icons/icon placeholder.png']}
+                        alt="Account"
+                    />
+                </button>
+
+            </div>
+
+        </nav>
     );
 }
