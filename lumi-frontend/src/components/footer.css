@@ -1,0 +1,67 @@
+footer{
+    background-color:  rgb(213, 209, 204) ;
+    /* color: rgb(213, 209, 204); */
+     color: rgb(4, 71, 71);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.lumiLogo{
+   /* background-color: aliceblue; */
+   height: 100px;
+   width: 200px;
+}
+
+.lumiLogo img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+.socialIcons img{
+    width: 50px;
+    height: 50px;
+}
+
+.contactDetails img{
+    width: 20px;
+    height: 20px;
+    margin-right: .5em;
+}
+
+.socialIcons{
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.contactDetails{
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+    
+}
+
+.contactDetails h4{
+    margin-bottom: .5em;
+}
+
+.copyright{
+    text-align: center;
+    padding-bottom: .2em;
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    color: #666;
+}
+
+@media(max-width:1000px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+}
