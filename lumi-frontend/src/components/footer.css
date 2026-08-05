@@ -2,11 +2,13 @@ footer{
     background-color:  rgb(213, 209, 204) ;
     /* color: rgb(213, 209, 204); */
      color: rgb(4, 71, 71);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+.footerContainer{
     padding: 1em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
 }
 
 .lumiLogo{
@@ -50,18 +52,21 @@ footer{
 }
 
 .copyright{
-    text-align: center;
-    padding-bottom: .2em;
+    padding: 1em ;
     display: flex;
-    flex-direction: column;
     gap: .3em;
     color: #666;
 }
 
 @media(max-width:1000px){
-    footer{
+    .footerContainer{
         display: flex;
         flex-direction: column;
         gap: 2em;
+    }
+    .copyright{
+        text-align: center;
+        padding: 1em 0;
+        flex-direction: column;
     }
 }
