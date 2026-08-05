@@ -1,0 +1,22 @@
+.hero-container{
+    position: relative;
+}
+
+.hero-image{
+    height: 70vh;
+    width: 100%;
+    position: relative;
+}
+
+.hero-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+}
