@@ -9,43 +9,13 @@ const images = import.meta.glob('../assets/images/*{png,jpg,jpeg}', {
 });
 
 
-// const bestSellerProducts = [{
-//    id: 1,
+const bestSellerProducts = [{
+   id: 1,
+   image: images['../assets/images/testImage.jpg'],
+   description: 'resable drinkware for a greener lifestyle',
+   price: 43.85
+}];
 
-// }];
-
-
-function ProductCard(){
-   return(
-      <div className="productCard">
-
-         <div className="productImage">
-            <img src={images['../assets/images/testImage.jpg']} alt="" />
-         </div>
-
-         <div className="productInfo">
-
-            <div className="options">
-               <button className="colorDot blue active"></button>
-               <button className="colorDot green"></button>
-               <button className="colorDot grey"></button>
-               <button className="colorDot black"></button>
-            </div>
-
-            <p className="description">resable drinkware for a greener lifestyle</p>
-         
-
-            <div className="productFooter">
-
-               <p>&#36;43.85</p>
-
-               <button className="addToCartBtn">&#43; Cart</button>
-
-            </div>
-         </div>
-      </div>
-   );
-}
 
 
 
@@ -69,7 +39,39 @@ export default function Home(){
 
                <div className="bestSellerProducts">
 
-                  <ProductCard />
+                  {/* <ProductCard /> */}
+
+                 { bestSellerProducts.map(product =>{
+                   return(
+                        <div className="productCard">
+
+                           <div className="productImage">
+                              <img src={product.image} alt="" />
+                           </div>
+
+                           <div className="productInfo">
+
+                              <div className="options">
+                                 <button className="colorDot blue active"></button>
+                                 <button className="colorDot green"></button>
+                                 <button className="colorDot grey"></button>
+                                 <button className="colorDot black"></button>
+                              </div>
+
+                              <p className="description">{product.description}</p>
+                           
+
+                              <div className="productFooter">
+
+                                 <p>&#36;{product.price}</p>
+
+                                 <button className="addToCartBtn">&#43; Cart</button>
+
+                              </div>
+                           </div>
+                        </div>
+                   );
+                 })}
 
                </div>
 
