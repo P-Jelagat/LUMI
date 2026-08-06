@@ -1,16 +1,47 @@
+.homePageContent{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+.bestSellers{
+    margin-top: 2.7em;
+
+}
+
+.bestSellerIntro{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bestSellerProducts{
+    margin: .8em 0;
+    display: flex;
+    gap: 8px;
+    padding: 10px 0;
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden ;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+
+.bestSellerProducts::-webkit-scrollbar {
+    display: none;
+}
 
 .productCard{
     display: flex;
     flex-direction: column;
     background-color: rgba(241, 203, 154,0.1);
-    margin: 15px;
     height: 360px;
     width: 230px;
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid rgba(170, 167, 167, 0.1);
     transition: 0.35s ease;
+    flex-shrink: 0;
 }
 
 .productImage{
