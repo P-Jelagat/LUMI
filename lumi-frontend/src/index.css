@@ -2,4 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+
+body{
+    padding: 8px;
+    /* background-color:  rgb(213, 209, 204) ; */
 }

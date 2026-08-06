@@ -15,7 +15,7 @@ export default function Footer(){
                         <img src={icons['../assets/icons/lumi logo.png']} alt="" />
                     </div>
 
-                    <p>Make room for beautiful living</p>
+                    <p>Make room for beautiful living.</p>
 
                     <div className="socialIcons">
                         <img src={icons['../assets/icons/icon placeholder.png']} alt="" />

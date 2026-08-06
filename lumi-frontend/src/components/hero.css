@@ -1,17 +1,20 @@
 .heroContainer{
     position: relative;
+    border-radius: 5px;
 }
 
 .heroImage{
     height: 60vh;
     width: 100%;
     position: relative;
+    border-radius: inherit;
 }
 
 .heroImage img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: inherit;
 }
 
 .heroImageOverlay{
@@ -23,6 +26,7 @@
     background: linear-gradient(70deg, rgba(0,0,0,0.6), rgba(0,0,0,0.1) );
     display: flex;
     align-items: flex-end;
+    border-radius: inherit;
 }
 
 .overlayContents{
