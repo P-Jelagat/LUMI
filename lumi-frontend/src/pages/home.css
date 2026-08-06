@@ -1,5 +1,7 @@
 .homePageContent{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -123,6 +125,55 @@
 }
 
 
+/* THE VIDEO */
+.homePageVideo {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    border-radius: 4px;
+    margin: 4em 0;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.videoOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+    display: flex;
+    align-items: flex-end;
+}
+
+.videoOverlayText{
+    width: 60%;
+    height: 50%;
+    color: rgb(247, 242, 237);
+    padding: 2.8em .7em;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: flex-end;
+}
+
+.videoOverlayText h4{
+    font-size: 1.2em;
+}
+
+.videoOverlayText p{
+    opacity: 0.8;
+}
+
+
+
 /* COLLECTIONS SECTION */
 .collections{
     margin-top: 2em;
@@ -148,7 +199,7 @@
 .collectionImage img{
     height: 100%;
     width: 100%;
-    transition: 0.3s ease;
+    transition: 0.6s ease;
 }
 
 .collectionOverlay{

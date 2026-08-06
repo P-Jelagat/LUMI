@@ -2,6 +2,7 @@ import "./home.css";
 import HomeNav from "../components/homeNav";
 import Hero from "../components/hero";
 import { Link } from "react-router-dom";
+import homePageVideo from "../assets/videos/homePageVideo.mp4";
 
 const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg}', {
    eager: true,
@@ -140,12 +141,24 @@ export default function Home(){
                   <div className="collections">
                      <div className="homePageVideo">
 
-                        <div className="video">
+                             <video 
+                               className="video"
+                               autoPlay muted loop
+                               playsInline
+                             >
 
-                        </div>
+                              <source src={homePageVideo} type="video/mp4" />
+                              Your browser does not support the video tag
+                             </video>
 
                         <div className="videoOverlay">
-
+                           <div className="videoOverlayText">
+                              <h4>Inspired by everyday living &#8212;</h4>
+                              <p>
+                                 We curate timeless home essentials that combine style, quality, and functionality for modern living.
+                                 Every product at LUMI is chosen with intention, combining thoughtful craftsmanship with everyday functionality.
+                              </p>
+                           </div>
                         </div>
 
                      </div>
