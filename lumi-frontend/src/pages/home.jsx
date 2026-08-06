@@ -11,40 +11,64 @@ const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg}', {
 
 // temporary storage for products till the backend is complete
 const bestSellerProducts = [{
-   id: 1,
-   image: images['../assets/images/testImage.jpg'],
-   description: 'resable drinkware for a greener lifestyle',
-   price: 43.85
-},{
-   id: 2,
-   image: images['../assets/images/testImage.jpg'],
-   description: 'resable drinkware for a greener lifestyle',
-   price: 43.85
-},{
-   id:3,
-   image: images['../assets/images/testImage.jpg'],
-   description: 'resable drinkware for a greener lifestyle',
-   price: 43.85
-},{
-   id: 4,
-   image: images['../assets/images/testImage.jpg'],
-   description: 'resable drinkware for a greener lifestyle',
-   price: 43.85
-},{
-   id: 5,
-   image: images['../assets/images/testImage.jpg'],
-   description: 'resable drinkware for a greener lifestyle',
-   price: 43.85
-},{
-   id: 6,
-   image: images['../assets/images/testImage.jpg'],
-   description: 'resable drinkware for a greener lifestyle',
-   price: 43.85
-},{
-   id: 7,
-   image: images['../assets/images/testImage.jpg'],
-   description: 'resable drinkware for a greener lifestyle',
-   price: 43.85
+         id: 1,
+         image: images['../assets/images/testImage.jpg'],
+         description: 'resable drinkware for a greener lifestyle',
+         price: 43.85
+      },{
+         id: 2,
+         image: images['../assets/images/testImage.jpg'],
+         description: 'resable drinkware for a greener lifestyle',
+         price: 43.85
+      },{
+         id:3,
+         image: images['../assets/images/testImage.jpg'],
+         description: 'resable drinkware for a greener lifestyle',
+         price: 43.85
+      },{
+         id: 4,
+         image: images['../assets/images/testImage.jpg'],
+         description: 'resable drinkware for a greener lifestyle',
+         price: 43.85
+      },{
+         id: 5,
+         image: images['../assets/images/testImage.jpg'],
+         description: 'resable drinkware for a greener lifestyle',
+         price: 43.85
+      },{
+         id: 6,
+         image: images['../assets/images/testImage.jpg'],
+         description: 'resable drinkware for a greener lifestyle',
+         price: 43.85
+      },{
+         id: 7,
+         image: images['../assets/images/testImage.jpg'],
+         description: 'resable drinkware for a greener lifestyle',
+         price: 43.85
+}];
+
+
+// temporary storage for the collection categories
+const collections = [{
+         id:1,
+         image:images['../assets/images/testImage.jpg'],
+         category: 'All things Cookware'
+      },{
+         id:2,
+         image:images['../assets/images/testImage.jpg'],
+         category: 'Kitchen & Dining '
+      },{
+         id:3,
+         image:images['../assets/images/testImage.jpg'],
+         category: 'Home & Living'
+      },{  
+         id:4,
+         image:images['../assets/images/testImage.jpg'],
+         category: 'Appliances'
+      },{
+         id:5,
+         image:images['../assets/images/testImage.jpg'],
+         category: 'Bathroom Essentials'   
 }];
 
 
@@ -113,7 +137,47 @@ export default function Home(){
 
                   {/* COLLECTIONS SECTION */}
 
-                  
+                  <div className="collections">
+                     <div className="homePageVideo">
+
+                        <div className="video">
+
+                        </div>
+
+                        <div className="videoOverlay">
+
+                        </div>
+
+                     </div>
+
+                     <div className="collectionsIntro">
+                        <p>Curated for every Space &#8212;
+                            Tailored Pieces from <strong>&#x2727; Our Collections &#x2727;</strong>  </p>
+                     </div>
+
+                     <div className="collectionsDisplay">
+
+                        {collections.map(collection => (
+                           <div className="collectionInfo">
+
+                              <div className="collectionImage">
+                                 <img src={collection.image} alt="" />
+                              </div>
+
+                              <div className="collectionOverlay">
+
+                                 <p>{collection.category}</p>
+
+                                 <button className="Explore CookwarePage">Explore &#x2192;</button>
+
+                              </div>
+
+                           </div>
+                        ))}      
+                     </div>
+
+
+                  </div>
 
             </div>
 

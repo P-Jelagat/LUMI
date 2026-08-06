@@ -2,6 +2,9 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+
+/* BESTSELLER SECTION */
+
 .bestSellers{
     margin-top: 2.7em;
 
@@ -85,7 +88,7 @@
 
 .options button{
     padding: 5px;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
     cursor: pointer;
     border-radius: 1000px;
 }
@@ -108,7 +111,7 @@
 .addToCartBtn{
     background-color: rgb(6, 116, 109);
     color: rgb(232, 232, 227);
-    border: 1px solid;
+    border: 1px solid rgba(0,0,0,0.2);
     padding: 6px;
     border-radius: 100px;
     min-width: 60px;
@@ -119,6 +122,87 @@
     transform: translateY(3px);
 }
 
+
+/* COLLECTIONS SECTION */
+.collections{
+    margin-top: 2em;
+}
+
+.collectionInfo{
+    display: flex;
+
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.collectionImage{
+    height: 100%;
+    width: 100%;
+}
+
+.collectionImage img{
+    height: 100%;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.collectionOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient( to bottom, rgba(0,0,0,0.02), rgba(0,0,0,0.7));
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    justify-content: flex-end;
+    text-align: center;
+    gap: .8em
+}
+
+.collectionOverlay{
+    color: rgb(241, 234, 225);
+    font-size: 1.2em;
+}
+
+.collectionOverlay button{
+    padding: 8px 12px;
+    align-self: center;
+    border-radius: 1000px;
+    border: 1px solid;
+    background-color: rgb(238, 238, 182);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.collectionInfo button:active{
+    opacity: 0.7;
+}
+
+.collectionsDisplay{
+    display: flex;
+    gap: 8px;
+    padding: 10px 0;
+    overflow-X: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.collectionsDisplay::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+
 @media(hover:hover){
     .productCard:hover{
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -126,5 +210,11 @@
     }
     .addToCartBtn:hover{
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .collectionInfo button:hover{
+        transform: scale(1.1);
+    }
+    .collectionInfo:hover .collectionImage img{
+        transform: scale(1.08)
     }
 }
